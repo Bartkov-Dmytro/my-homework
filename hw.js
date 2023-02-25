@@ -81,3 +81,26 @@ const func4 = (roomsOnFloor,floors,roomNumber) => {
 func4(roomsOnFloor,floors,roomNumber)
 
 // _______________________________________________
+
+// 1.5: Вывести в консоль пирамиду. Переменная указывает количество строк из которых построится пирамида.
+//  Пирамида должна строится в одинаковом визуально виде между собой, но строго учитывая кол-во строк
+
+const func5 = num => {
+    let a = `#`
+    
+    const func1 = (num, i) => {
+        let b = num - i
+        let c = ``
+        for (let i2 = 0; i2 < b; i2++) {
+            c += `-`
+        }
+        return c
+    }
+
+    for (let i = 1; i <= num; i++) {
+        let c = func1(num, i)
+        console.log(`${c}${a}${c}`)
+        a = a + `##`
+    }
+}
+func5(16)
